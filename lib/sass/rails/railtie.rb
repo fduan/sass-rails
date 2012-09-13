@@ -33,7 +33,7 @@ module Sass::Rails
     config.before_initialize do |app|
       require 'sass'
 
-      if app.config.assets enabled
+      if app.config.assets.enabled
         require 'sprockets'
         Sprockets::Engines #force autoloading
         Sprockets.register_engine '.sass', Sass::Rails::SassTemplate
